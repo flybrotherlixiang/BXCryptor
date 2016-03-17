@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53E9C1361C9A55690086814D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E9C1351C9A55690086814D /* main.m */; };
+		53E9C13F1C9A55BC0086814D /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E9C13E1C9A55BC0086814D /* RNCryptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		53E9C1321C9A55690086814D /* BXCryptor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BXCryptor; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E9C1351C9A55690086814D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53E9C13C1C9A55BC0086814D /* BXCryptor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BXCryptor-Bridging-Header.h"; sourceTree = "<group>"; };
+		53E9C13D1C9A55BC0086814D /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
+		53E9C13E1C9A55BC0086814D /* RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,10 @@
 		53E9C1341C9A55690086814D /* BXCryptor */ = {
 			isa = PBXGroup;
 			children = (
+				53E9C13D1C9A55BC0086814D /* RNCryptor.h */,
+				53E9C13E1C9A55BC0086814D /* RNCryptor.swift */,
 				53E9C1351C9A55690086814D /* main.m */,
+				53E9C13C1C9A55BC0086814D /* BXCryptor-Bridging-Header.h */,
 			);
 			path = BXCryptor;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E9C1361C9A55690086814D /* main.m in Sources */,
+				53E9C13F1C9A55BC0086814D /* RNCryptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,14 +215,21 @@
 		53E9C13A1C9A55690086814D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BXCryptor/RNCryptor.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		53E9C13B1C9A55690086814D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BXCryptor/RNCryptor.h;
 			};
 			name = Release;
 		};
